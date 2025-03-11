@@ -1,38 +1,62 @@
-# applied-ml-template
+# ml-01 
+# California House Price Prediction
 
-Start by copying this template repository into your GitHub account. Replace "template" with your name or alias, e.g. applied-ml-case.
+## Author
+David Rodriguez-Mayorquin 
+[github.com/drodmay1](https://github.com/drodmay1)
 
-We will use this repo for several lab projects. 
+## Overview
+This project uses the **California Housing Dataset** to build a **Linear Regression Model** that predicts **median house value** based on features such as **median income** and **average number of rooms**.
 
-## Set up Machine and Follow Professional Workflow
+## Goal
+The goal is to predict **median house values** (`MedHouseVal`) based on various features like:
 
-Read and follow the standard set up and work flow provided at Professional Analytics: Project Setup / Initialization / Standard Workflow
+- Median Income (`MedInc`)
+- Average Number of Rooms (`AveRooms`)
+- House Age
+- Population
+- Location (Latitude & Longitude)
 
-- [pro-analytics-01](https://github.com/denisecase/pro-analytics-01)
+## Dataset 
+Dataset: **California Housing Dataset**
+- Source: Scikit-learn's built-in dataset
+- Rows: 20,640
+- Features: 8 numerical predictors + 1 target
 
-## Contents of this Repository
+## ML Workflow Overview
+1. Load and explore data
+2. Visualize feature distributions
+3. Select features
+4. Split data into training and test sets
+5. Train a Linear Regression model
+6. Evaluate performance using R², MAE, RMSE
+---
 
-- .venv - this folder will appear when you create your virtual environment
-- .vscode - this folder has some settings that help VS Code & Pylance find packages
-- .gitignore - keep .venv and other stuff out of source control
-- README.md - introduction to this repository
-- requirements.txt - list of external packages used (read this)
+## Technologies Used
+- Python
+- Pandas, NumPy, Matplotlib, Seaborn
+- Scikit-learn
+- Jupyter Notebook / VS Code
 
-## Folders for Examples
+## Project Outline
+Machine learning projects follow a structured approach.
+We will use this approach throughout the course. 
 
-Starter files for the example labs
+### Section 1. Load and Explore the Data
+- 1.1 Load the dataset and display the first 10 rows.
+- 1.2 Check for missing values and display summary statistics.
 
-- example01 folder
-- example02 folder
+### Section 2. Visualize Feature Distributions
+- 2.1 Create histograms, boxplots, and scatterplots.
+- 2.2 Identify patterns or anomalies in feature distributions.
 
-## Folders for Lab Projects
+### Section 3. Feature Selection and Justification
+- 3.1 Choose two input features for predicting the target.
+- 3.2 Justify your selection with reasoning.
 
-Each lab project will be completed in its own folder.
-
-- lab01 folder:
-   - ml01.ipynb - COMPLETE THIS 
-   - ml01.py - working script with just the code
-   - README.md - instructions - modify this to present your lab project
-
+### Section 4. Train a Linear Regression Model
+- 4.1 Define X (features) and y (target).
+- 4.2 Train a Linear Regression model using Scikit-Learn.
+- 4.3 Report R^2, MAE, RMSE.
 
 
