@@ -1,93 +1,68 @@
-# ml-05
+# Lab 5: Ensemble Machine Learning – Wine Quality Prediction
 
-Implement and evaluate more complex models when simpler techniques aren't enough. 
+This project focuses on using ensemble machine learning models to predict the quality of red wine based on chemical properties. We used the Wine Quality dataset from UCI, which includes 11 physicochemical features and a quality score rated by wine tasters.
 
----
+## GitHub Repository
+https://github.com/drodmay1/applied-ml-davidrm/tree/main/lab05
 
-## Get Started
+## Objective
+Simplify the wine quality ratings into three categories:  
+- Low (scores 3–4)  
+- Medium (5–6)  
+- High (7–8)
 
-1. Copy template repo to your GitHub account. 
-2. Clone your repo down to your machine. 
-3. Open your project repository folder in VS Code.
- 
----
+## Notebook Structure
+The notebook `ensemble-davidrm.ipynb` includes the following sections:
 
-## Windows Setup Instructions
+- `# Lab 5: Ensemble Machine Learning – Wine Dataset`
+- `## Import Libraries`
+- `## Section 1: Load and Inspect the Data`
+- `## Section 2. Prepare the Data`
+- `## Section 3: Feature Selection and Justification`
+- `## Section 4: Split the Data into Train and Test Sets`
+- `## Section 5: Evaluate Model Performance`
+- `## Section 6: Compare Results`
+- `## Section 7: Conclusions and Insights`
 
-Open a PowerShell terminal in VS Code. 
-Create local project virtual environment, activate it, and install packages. 
-When asked to use the new .venv click yes. 
+## Models Used
+- **Random Forest (100 trees)**  
+- **Voting Classifier** (Decision Tree + SVM + Neural Net)
 
-Important: Install from requirements first with scikit-learn commented out. 
-Then remove the leading hashmark (around line 187) and re-run the command to install scikit-learn.
-See requirements.txt for more information. 
+Both models were evaluated using:
+- Accuracy  
+- F1 Score  
+- Confusion Matrix  
+- Train/Test performance gaps
 
+## Results Summary
 
-```shell
-py -m venv .venv
-.\.venv\Scripts\activate
-py -m pip install --upgrade pip setuptools wheel
-py -m pip install -r requirements.txt
-py -m pip install -r requirements.txt
+| Model                   | Test Accuracy | Test F1 Score |
+|------------------------|----------------|----------------|
+| Random Forest (100)     | 88.75%         | 0.8661         |
+| Voting (DT + SVM + NN)  | 86.56%         | 0.843
 
+Random Forest had slightly better performance overall but showed signs of overfitting. The Voting Classifier performed consistently with smaller gaps between training and test scores.
+
+## Files
+- `ensemble-davidrm.ipynb` – Full notebook with code, analysis, and results
+- `winequality-red.csv` – The dataset used for training/testing
+
+## Getting Started
+### Clone the Repository
+
+```bash
+git clone https://github.com/drodmay1/applied-ml-davidrm.git
+cd applied-ml-davidrm/lab05
 ```
----
 
-## Mac/Linux Setup Instructions
+### Set Up and Active Virtual Environment
+# Create virtual environment
+python -m venv .venv
 
-Open a default terminal in VS Code. 
-Create local project virtual environment, activate it, and install packages. 
-Important: Install from requirements first with scikit-learn commented out. 
-Then remove the leading hashmark (around line 187) and re-run the command to install scikit-learn.
-See requirements.txt for more information. 
-
-```zsh
-python3 -m venv .venv
+# Activate on macOS/Linux
 source .venv/bin/activate
-python3 -m pip install --upgrade pip setuptools wheel
-python3 -m pip install -r requirements.txt
-python3 -m pip install -r requirements.txt
-```
----
 
-## Tell VS Code to use .venv
+# Or activate on Windows
+.venv\Scripts\activate
 
-Open the Command Palette: Press Ctrl + Shift + P (Windows) or Cmd + Shift + P (Mac/Linux)
-Then type: Python: Select Interpreter
-Press Enter.
 
-Look for the interpreter with .venv in the path.
-Click on that interpreter to select it.
-Confirm it's selected: You should see the Python version and .venv path in the lower-left status bar of VS Code.
-
----
-
-## Working on the Project
-
-Open the .ipynb Jupyter notebook file in VS Code. 
-Run the entire notebook before you start to edit. 
-As you make progress, use Git to add, commit, and push your work to your GitHub repo.
-
-```shell
-git add .
-git commit -m "describe the change here"
-git push -u origin main
-```
-
-For additional information and suggestions, follow the process for professional Project Setup / Initialization / Standard Workflow in
-[pro-analytics-01](https://github.com/denisecase/pro-analytics-01)
-
-## Dataset Source
-
-The Wine Quality Dataset is made available by the UCI Machine Learning Repository.
-
-[https://archive.ics.uci.edu/ml/datasets/Wine+Quality](https://archive.ics.uci.edu/ml/datasets/Wine+Quality)
-
-Data originally published by:
-P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.  
-Modeling wine preferences by data mining from physicochemical properties.  
-In *Decision Support Systems*, Elsevier, 47(4):547–553, 2009.
-
-Direct download link to raw csv:
-
-<https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv>
