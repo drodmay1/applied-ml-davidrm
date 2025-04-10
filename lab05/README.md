@@ -55,14 +55,14 @@ git clone https://github.com/drodmay1/applied-ml-davidrm.git
 cd applied-ml-davidrm/lab05
 ```
 
-### Set Up and Active Virtual Environment
-# Create virtual environment
+## Set Up and Active Virtual Environment
+### Create virtual environment
 python -m venv .venv
 
-# Activate on macOS/Linux
+### Activate on macOS/Linux
 source .venv/bin/activate
 
-# Or activate on Windows
+### Or activate on Windows
 .venv\Scripts\activate
 
 
